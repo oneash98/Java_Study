@@ -1,6 +1,8 @@
 package collection;
 
-public class Member {
+import java.util.Comparator;
+
+public class Member implements Comparator<Member> {
     private int memberId;
     private String memberName;
 
@@ -43,5 +45,10 @@ public class Member {
             else return false;
         }
         return false;
+    }
+
+    @Override
+    public int compare(Member mem1, Member mem2) {
+        return mem1.getMemberId() - mem2.getMemberId();
     }
 }
