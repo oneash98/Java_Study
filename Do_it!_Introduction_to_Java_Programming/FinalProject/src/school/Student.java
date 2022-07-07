@@ -15,6 +15,7 @@ public class Student {
         this.majorSubject = majorSubject;
     }
 
+    // 점수 추가 메서드
     public void addSubjectScore(Score score) {
         scoreList.add(score);
     }
