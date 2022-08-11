@@ -1,14 +1,16 @@
-import java.io.IOException;
+import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws IOException {
-        int i;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        try{
-            i = System.in.read();
-            System.out.println((char)i);
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
+        System.out.println("숫자, 이름");
+        
+        int i = scanner.nextInt();
+        scanner.nextLine();
+        String name = scanner.nextLine();
+
+        System.out.println(i);
+        System.out.println(name);
     }
 }
